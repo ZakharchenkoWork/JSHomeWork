@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div.top {
+            background-color: lightBlue;
+            padding: 20px;
+            color: blue;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        button {
+            padding: 0.5em 3em;
+            border: 0.16em solid #000000;
+            margin: 5em 10em 0 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: #000000;
+            text-align: center;
+            transition: all 0.15s;
+        }
+
+        button:hover {
+            color: #FFFFFF;
+            border-color: #929292;
+            background-color: #103406;
+        }
+
+        button:active {
+            color: #BBBBBB;
+            border-color: #BBBBBB;
+            background-color: #2a6c10;
+        }
+
+    </style>
+</head>
+<body>
+<div class="top">Захарченко Константин Георгиевич</div>
+<div class="top" id="favoriteValue"></div>
+<div>
+    <button id="favoriteFood">Любимое блюдо</button>
+    <button id="favoriteDrink">Любимый напиток</button>
+    <button id="favoriteWomen">Любимая женщина</button>
+</div>
+<script>
+    addListener('favoriteFood', 'Суши');
+    addListener('favoriteDrink', 'Мохито');
+    addListener('favoriteWomen', 'Жена');
+
+    function addListener(elementName, callbackText) {
+        document.getElementById(elementName)
+            .addEventListener('click', () => {
+                document.getElementById('favoriteValue').innerText = callbackText;
+            });
+    }
+</script>
+</body>
+</html>
