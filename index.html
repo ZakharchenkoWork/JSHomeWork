@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<div class="top">Захарченко Константин Георгиевич</div>
 <script>
-    alert('\\Zakharchenko\\\n' +
-        '\"Konstantyn\"\n' +
-        '\u2732 +380973332248\n' +
-        String.fromCodePoint(0x1F91F) + 'Odessa');
+    function getAverage() {
+        let firstValue = Number(prompt("Please enter first value"));
+        if (Number.isNaN(firstValue)) {
+            showError();
+        } else {
+            let secondValue = Number(prompt("Please enter second value"));
+            if (Number.isNaN(secondValue)) {
+                showError();
+            } else {
+                alert((firstValue + secondValue) / 2);
+            }
+        }
+    }
+
+    function showError() {
+        alert('You need to insert a number');
+        getAverage();
+    }
+
+    getAverage();
 </script>
 </body>
 </html>
