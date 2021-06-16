@@ -6,16 +6,11 @@
 <body>
 <script>
     function getAverage() {
-        let firstValue = Number(prompt("Please enter first value"));
+        let firstValue = Number(prompt("Please enter number"));
         if (Number.isNaN(firstValue)) {
             showError();
         } else {
-            let secondValue = Number(prompt("Please enter second value"));
-            if (Number.isNaN(secondValue)) {
-                showError();
-            } else {
-                alert((firstValue + secondValue) / 2);
-            }
+            alert(Math.pow(firstValue, 3));
         }
     }
 
